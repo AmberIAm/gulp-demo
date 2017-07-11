@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+//common [mixin]
+$position: absolute;
+@mixin all-set($background-color, $width, $height, $left, $top) {
+  background-color: $background-color;
+  width: $width;
+  height: $height;
+  position: $position;
+  left: $left;
+  top: $top;
+}
+
+@mixin itemPosition-set($left, $top) {
+  position: $position;
+  left: $left;
+  top: $top;
+}
+
+/* common style */
+
+/* common background-image */
+//body{
+//	background: #000 url("../img/bg.jpg") no-repeat fixed;
+//}
+//
+///* platform-homepage */
+//// [platform] share the same logo and navigation, therefore its style is included in this file
+//@import "platform-homepage";
+
+/* the logo in the top left corner of the page */
+.bg-logo {
+  width: 114px;
+  height: 58px;
+  @include itemPosition-set(79px, 49px);
+}
+
+.ori-supplier-bg-logo {
+  width: 175px;
+  height: 39px;
+  @include itemPosition-set(99px, 58px);
+}
+
+.global-supplier-bg-logo {
+  width: 187px;
+  height: 58px;
+  @include itemPosition-set(96px, 48px);
+}
+
+.sunshine-supplier-bg-logo {
+  width: 212px;
+  height: 58px;
+  @include itemPosition-set(96px, 46px);
+}
+
+.zhonghua-supplier-bg-logo {
+  width: 140px;
+  height: 69px;
+  @include itemPosition-set(34px, 42px);
+}
+
+body {
+  font-size: 20px;
+  background-color: grey;
+}
+
+/** warn
+ * 404
+ * 505
+ * any massage
+ */
